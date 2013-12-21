@@ -148,7 +148,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMFileManager \
     LockClock \
-    CMUpdater \
     CMFota \
     CMAccount
 
@@ -268,7 +267,7 @@ ifdef CM_BUILDTYPE
     endif
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
+    CM_BUILDTYPE := Linaro
     CM_EXTRAVERSION :=
 endif
 
@@ -299,6 +298,9 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION) \
+  ro.goo.developerid=thddude \
+  ro.goo.rom=CM11-Linaro \
+  ro.goo.version=$(shell date -u +%Y%m%d) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 -include vendor/cm-priv/keys/keys.mk
