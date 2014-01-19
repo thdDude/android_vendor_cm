@@ -314,9 +314,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.version=$(CM_VERSION) \
   ro.modversion=$(CM_VERSION) \
-  ro.goo.developerid=thddude \
+  ro.goo.developerid=helldevs \
   ro.goo.rom=Unofficial-CM10.2-Linaro \
-  ro.goo.version=$(shell date -u +%Y%m%d)
+  ro.goo.version=$(shell date -u +%Y%m%d) \
+  ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 -include vendor/cm/sepolicy/sepolicy.mk
 
